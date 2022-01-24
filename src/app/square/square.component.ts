@@ -11,13 +11,18 @@ export class SquareComponent extends Shape implements OnInit {
   length: number = 0;
   height: number = 0;
   perimeter: number = 0;
-  area:number = 0;
+  area: number = 0;
 
   constructor() { 
     super();
    }
 
   ngOnInit(): void {
+  }
+
+  runCalculations(length: number, height:number){
+    this.calculatePerimeter(length, height)
+    this.calculateArea(length, height)
   }
 
   public calculatePerimeter(L:number, H:number): number
@@ -30,5 +35,4 @@ export class SquareComponent extends Shape implements OnInit {
     this.area = L * H;
     return this.area;
   }
-
 }

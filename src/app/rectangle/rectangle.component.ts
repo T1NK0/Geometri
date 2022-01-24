@@ -20,13 +20,19 @@ export class RectangleComponent extends Shape implements OnInit {
   ngOnInit(): void {
   }
 
-  public calculatePerimeter(L:number, H:number)
-  {
-    return Math.pow(L, 2) + Math.pow(H, 2);
+  runCalculations(length: number, height:number){
+    this.calculatePerimeter(length, height)
+    this.calculateArea(length, height)
   }
 
-  public calculateArea(L:number, H:number)
+  public calculatePerimeter(L:number, H:number): number
   {
-    return L * H;
+    this.perimeter = Math.pow(L, 2) + Math.pow(H, 2);
+    return this.perimeter;
+  }
+
+  public calculateArea(L: number, H: number): number {
+    this.area = L * H;
+    return this.area;
   }
 }

@@ -1,4 +1,4 @@
-<div class="card col-md-3">
+<div class="card">
     <div class="card-body">
         <form>
             <div class="form-group">
@@ -7,7 +7,7 @@
                 <input id="length" class="form-control" placeholder="Længde" [(ngModel)]="length" />
                 <label for="height">Højde</label>
                 <input id="height" class="form-control" placeholder="Højde" [(ngModel)]="height" />
-                <input type="submit"/>
+                <button type="submit" (click)="runCalculations(length, height)" class="btn btn-success">Beregn</button>
                 <p>Omkrds: {{perimeter}}</p>
                 <p>Areal: {{area}}</p>
             </div>

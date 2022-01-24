@@ -1,19 +1,16 @@
-<form>
-    <div class="form-group">
-        <div class="row">
-            <div class="col-md-6">
+<div class="card col-md-3">
+    <div class="card-body">
+        <form>
+            <div class="form-group">
                 <h2>Rektangel</h2>
-                <label for="sideA">Sidelængde A</label>
-                <input id="sideA" class="form-control" placeholder="Sidelængde A" />
-                <label for="sideB">Sidelængde B</label>
-                <input id="sideB" class="form-control" placeholder="Sidelængde B" />
+                <label for="length">Længde</label>
+                <input id="length" class="form-control" placeholder="Længde" [(ngModel)]="length" />
+                <label for="height">Højde</label>
+                <input id="height" class="form-control" placeholder="Højde" [(ngModel)]="height" />
                 <input type="submit"/>
+                <p>Omkrds: {{perimeter}}</p>
+                <p>Areal: {{area}}</p>
             </div>
-
-            <div class="col-md-6">
-                <p>Omkreds: result here</p>
-                <p>Areal: result here</p>
-            </div>
-        </div>
+        </form>
     </div>
-</form>
+</div>

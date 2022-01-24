@@ -1,16 +1,14 @@
 <div class="card">
     <div class="card-body">
-        <form>
             <div class="form-group">
                 <h2>Kvadrat</h2>
                 <label for="length">Længde</label>
-                <input id="length" class="form-control" placeholder="Længde" [(ngModel)]="length" />
+                <input id="length" name="length" class="form-control" placeholder="Længde" [(ngModel)]="length" />
                 <label for="height">Højde</label>
-                <input id="height" class="form-control" placeholder="Højde" [(ngModel)]="height" />
+                <input id="height" name="height" class="form-control" placeholder="Højde" [(ngModel)]="height" />
                 <button type="submit" (click)="runCalculations(length, height)" class="btn btn-success">Beregn</button>
                 <p>Omkrds: {{perimeter}}</p>
                 <p>Areal: {{area}}</p>
             </div>
-        </form>
     </div>
 </div>
